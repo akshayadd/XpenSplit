@@ -1,0 +1,75 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            android:title="Xpense"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="12dp"
+            android:drawableTop="@drawable/person"
+            android:padding="10dp"
+            android:text="Person" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="12dp"
+            android:drawableTop="@drawable/group"
+            android:padding="10dp"
+            android:text="Groups" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="12dp"
+            android:drawableTop="@drawable/summary"
+            android:padding="10dp"
+
+            android:text="Sumaary" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="12dp"
+            android:drawableTop="@drawable/budget"
+            android:padding="10dp"
+            android:text="Budget" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawablePadding="12dp"
+            android:drawableTop="@drawable/category"
+            android:padding="10dp"
+            android:text="Category" />
+    </LinearLayout>
+</ScrollView>
