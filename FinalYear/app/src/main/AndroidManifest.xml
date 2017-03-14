@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="akshay.com.finalyear">
+    package="com.akshay.finalyear">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -8,9 +14,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:name=".SplashActivity"
             android:theme="@style/AppTheme.Dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +24,48 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--
+            <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Dark" />
+        -->
+        <activity
+            android:name=".SignInActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".SignUpActivity"
+            android:parentActivityName=".SignInActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".AddExpenseActivity"
+            android:label="@string/action_add_expense"
+            android:parentActivityName=".PersonActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".SummaryActivity"
+            android:label="@string/title_activity_summary"
+            android:parentActivityName=".DrawerActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".PersonActivity"
+            android:label="My Expense"
+            android:parentActivityName=".DrawerActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".CategoryActivity"
+            android:label="Category"
+            android:parentActivityName=".DrawerActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".BudgetActivity"
+            android:label="My Budget"
+            android:parentActivityName=".DrawerActivity"
+            android:theme="@style/AppTheme.Dark" />
     </application>
 
 </manifest>
